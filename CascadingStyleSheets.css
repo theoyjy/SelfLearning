@@ -1,0 +1,27 @@
+/*comments*/
+p{
+    color: rgb(0,0,255);
+    color: rgb(100%,0%,0%);
+    color: #ff0000;
+    color: #f00; /*remove duplicates*/
+    color: black;
+    background-color: orange;
+    height:60px;
+    width:1000px;
+    border: 1px solid black;
+}
+/*
+color consists of:
+R red （low）0~255（high）
+G green
+B blue
+
+16进制：
+0-9 A B C D E F
+
+R 00~FF
+G 
+B 
+
+#0000FF
+*/

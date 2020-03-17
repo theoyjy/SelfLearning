@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <style>
+        div{
+            color:red;
+            width:100px;
+            height:100px;
+            background-color: bisque;
+        }
+        #txt{
+            border: 1px dotted red;
+        }
+        h3#txt{
+            border: 1px dotted red;
+        }
+        *#txt{
+            border: 1px dotted red;
+        }
+        .c{
+            color: blueviolet;
+        }
+    </style>
+    <link rel="stylesheet" href="CascadingStyleSheets.css">
+</head>
+<body>
+    CSS: cascading style sheets
+    <ol>
+        <li>so many properties of elements</li>
+        <li>so complicate to maintain</li>
+    </ol>
+    <h3>&lt;style&gt; define in head</h3>
+    <div>apple</div>
+    <h3>css file define styles</h3>
+    <p> selector{
+        <br>..
+        <br>..  
+        }
+    </p>
+    <h2>selector:</h2>
+    <ul>
+        <br>
+        <li>basic selector *{}, * include all elements</li>
+        <br>
+        <li>element selector eg. div{}</li>
+        <br>
+        <li>id selector(unique):
+            <h3 id="txt">this line has id=“txt”, <br>
+            style #txt defined in head <br>
+            *#txt style all id=txt<br>
+            h3#txt only style all h3 whose id are txt 
+            </h3>
+        </li>
+        <li>class selector .
+            <h3 class="c c2">there are two classes c and c2:<br>
+            .c{}<br>.c2{}<br>*.c{}
+            </h3>
+        </li>
+    </ul>
+    <h2>principle:</h2>
+    <ol>
+        <li>优先原则： 后解析css的内容 会覆盖之前的(.c2{} 在.c1{}之后解析， 那么无论class="c1 c2" 还是 class="c2 c1", 都会按c2执行)</li>
+        <ol>
+            <li>同一个选择： 从上往下</li>
+            <li>同一类型选择器：从上往下</li>
+            <li>不同类型选择器 从低到高解析： * &lt; div &lt; class &lt; id </li>
+            <li>先外部样式 后内部样式（为主） 合并之后一起解析</li>
+            <li>内联（在element 内部定义的样式）：外部加内部解析完了之后，才解析内联样式</li>
+            <li>加了 important 的字段最后解析</li>
+        </ol>
+        <li>继承原则： 嵌套里面的标签 拥有外部标签的某些样式<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 子元素继承父元素的属性</li>
+        <ol>
+            <li>跟文本相关 样式 可以被继承</li>
+            <li>块级元素 宽度 不被设置时 直接继承父元素， 高度 由内容决定</li>
+        </ol>
+    </ol>
+    <h2>组合选择器</h2>
+    <em>把基本选择器通过特殊符号串在一起</em>
+    <ol>
+        <li>分组 , eg.: div,p{} div和p有相同样式</li>
+        <li>嵌套选择器 用空格分开 div p{} 只有最近的父级是div的p使用这种样式</li>
+        <li>相邻同级别选择器 div+p{} p的同级别是div的p会使用这个样式</li>
+    </ol>
+</body>
+</html>

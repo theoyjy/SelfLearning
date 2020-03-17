@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    element classes:
+    <ul>
+        <li>块元素： 独立成一行 可以设置宽高 默认宽高100%:
+            <li>文字类：p  h1~h6</li>
+            <li>容器类：div table tr td th form ul li ol dl dt dd</li>
+        </li>
+        <li>行元素： 不独立成行， 不可设置 内容决定
+            <li>a img input strong em del span</li>
+        </li>
+        <li>特殊字符： 文字 br &nbsp</li>
+    </ul>
+    嵌套规则：
+    <ol>
+        <li>块元素客气嵌套行元素:</li>
+        <em>&lt;div&gt;&lt;input&gt;&lt;/input&gt;&lt;/div&gt;</em>
+        <li>行元素可以嵌套行元素:</li>
+        <em>&lt;em&gt;&lt;p&gt;&lt;/p&gt;&lt;/em&gt;</em>
+        <li>行元素不可以嵌套块元素:</li>
+        <em>&lt;a&gt;&lt;div&gt;&lt;/div&gt;&lt;/a&gt;</em>
+        <li>文字类块元素不可以快元素:</li>
+        <em>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;<em>
+    </ol>
+</body>
+</html>
