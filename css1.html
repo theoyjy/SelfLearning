@@ -24,6 +24,21 @@
         .c{
             color: blueviolet;
         }
+        p[title^=h]{
+            color:brown;
+            background-color: aqua;
+        }
+        h4::before{
+            content: "before ";
+            font-size: 30px;
+        }
+        h4::after{
+            content: " after"
+        }
+        h4{
+            font-size: 40px;
+            background-color:chartreuse;
+        }
     </style>
     <link rel="stylesheet" href="CascadingStyleSheets.css">
 </head>
@@ -87,5 +102,21 @@
         <li>嵌套选择器 用空格分开 div p{} 只有最近的父级是div的p使用这种样式</li>
         <li>相邻同级别选择器 div+p{} p的同级别是div的p会使用这个样式</li>
     </ol>
+    <h2>属性选择器</h2>
+    <strong>element[property], class->. ; id-># ;<br>
+        css:<br>
+        [property=value],<br>
+        [property~=value], value included 以空格隔开 hey->correct, hey2->incorrect<br>
+        [property^=value], start with value, hey and hey2 both fine <br>
+        [property$=value], end with value, y and ey both fine
+    </strong>
+    <p title="hey">p[title=hey]{}; p[title~=hey];<del>p[title~=h]</del>; p[title^=h]; p[title$=y]</p>
+    <h2>伪元素选择器</h2>
+    <strong>每一个元素都有两个伪元素：&lt;before&gt; &lt;after&gt; element::before</strong>
+    <h4>h4::before{} he::after</h4>
+    <h2>块元素选择器<</h2>
+    <strong>&lt;first-letter&gt; &lt;first-line&gt;</strong>
+    <h2>伪类选择器</h2>
+    <strong>根据状态改变 如：按钮没有被按->按钮被按</strong>
 </body>
 </html>
