@@ -1,0 +1,23 @@
+/*
+4 kinds of statue:*/
+a:link{
+    color:blue;
+}
+a:active{
+    color: green;
+}
+a:hover{
+    color:yellow;
+}
+a:visited{
+    color:red;
+}
+
+ul{
+    list-style-type: lower-latin;
+}
+li{
+    background-image: url(pic/PandaHug.jpg);
+    background-repeat: no-repeat;
+    height:100px;
+}

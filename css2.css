@@ -1,0 +1,23 @@
+/*txt define font, property*/
+body{
+    /*
+    background-image: url(pic/PandaHug.jpg);
+    background-repeat: no-repeat;
+    background-position: center 200px;/*px % left right center
+    background-attachment: fixed; /*background does not move with the scroll
+    */
+    /*background: color image repeat attachment should be defined at this order*/
+    background: skyblue url(pic/PandaHug.jpg) no-repeat center 200px fixed;
+    /*
+    font-family: "微软雅黑";
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;*/
+    /*font:style weight size/line-height font-family
+    at lease declare size and family*/
+    font: italic bold 30px 10px arial;
+    letter-spacing: 0px;
+    direction: rtl;/*right to left*/
+    text-decoration: overline line-through;
+    text-align: center ;
+}
