@@ -1,0 +1,25 @@
+/*
+box: conclude all elements as rectangle boxes
+内容：鞋子
+内边距： 报纸 空间
+盒子框： 鞋盒 纸盒子
+外边距： 鞋盒 鞋盒之间边距
+*/
+.box1{
+    background-color: aquamarine;
+    border: 5px solid black;
+    /*(top buttom left right)  all 10px*/
+    padding: 10px;
+    /*(above below) 10px  (left right) 20px*/
+    padding: 10px 20px;
+    /*(above) 10px (left right) 20px (below) 30px*/
+    padding: 10px 20px 30px;
+    /*(above) 10px (below) 20px (left) 30px (right) 40px*/
+    padding: 10px 20px 30px 40px;
+    /*same as padding*/
+    margin: 30px;
+}
+.box2{
+    margin:30px; 
+
+}

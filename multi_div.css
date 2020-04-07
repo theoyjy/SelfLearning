@@ -1,0 +1,53 @@
+div{
+    background-color: aqua;
+    margin:30px;
+}
+.d1,.d2,.d3,.d4,.d5,.d6,.d7{
+    width: 200px;
+    height: 300px;
+    float: left;
+    background-color: bisque;
+}
+/*清理margin*/
+.container::before{
+    content: "";
+    display: table;
+}
+/*清理浮动*/
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.p1{
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
+.p2{
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+}
+
+.p3{
+    position: relative;
+    top: 800px;
+    left:500px;
+}
+
+.p4{
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+}
+
+
+
