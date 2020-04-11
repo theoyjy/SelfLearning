@@ -1,0 +1,144 @@
+body,ul,li{
+    margin:0;
+    padding: 0;
+}
+body{
+    height: 2500px;
+    font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.topbar-ad_log{
+    background-color:#424242;
+    color: #fff;
+    height: 40px;
+    margin-top: 0;
+}
+.container_1{
+    margin:0 auto;
+    width: 1000px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.container_1 a{
+    color: #fff;
+}
+.container_1 a hover{
+    color: black;
+}
+.topbar-adver{
+    float: left;
+    font-size: 10px;
+}
+.topbar-login{
+    float: right;
+}
+.topbar-login span{
+    margin-left: 10px;
+}
+/* 
+.topbar{
+    background-color: black;
+    color:white;
+    height:50px;
+}
+.container_2{
+    /*border: 1px solid blanchedalmond;
+    margin:0 auto;
+    width: 1000px;
+}
+.container_2::before,.container::after{
+    clear:both;
+    content:"";
+    display: table;
+}
+
+.topbar a{
+    color: #b0b0b0;
+    font-size: 14px;
+}
+.topbar a:hover{
+    color:white;
+}
+.topbar-nav a{
+    display: block;
+    float: left;
+    text-align: center;
+}
+/*.class .class is workable
+.container_2 .topbar-nav{
+    height: 50px;
+    line-height: 50px;
+    font-size: 0px;
+ }
+ 
+ .topbar-nav span{
+    float: left;
+    font-size: 10px;
+    color: black;
+    margin:0 39px;
+}
+ .topbar-nav a img{
+    width:31.25px;
+    height: 25px;
+    margin-top: 13px;
+    float: left;
+    display: block;
+ } 
+
+ */
+.nav{
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+.nav-container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.nav-logo{
+    float: left;
+    width: 25px;
+    height: 50px;
+    /* margin-top: 9.375px; */
+    /* border: 1px solid red; */
+}
+.nav-logo a{
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    background: url("../pic/icon2.png") no-repeat;
+    background-size:contain;
+}
+.nav-logo .apple-main-page{
+    text-align: left;
+    text-indent: -9999em;
+}
+.nav-list-container{
+    float: left;
+    width: 971px;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+.nav-list{
+    font-size: 14px;
+}
+.nav-list .nav-item{
+    float: left;
+    margin:18px 44px;
+    color: #696565;
+}
+.nav-list .nav-item-last{
+    float: left;
+    margin: 18px 0px 18px 40px;
+    color: #696565;
+}
+.nav-list a:hover{
+    color: white;
+}
+
