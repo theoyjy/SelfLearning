@@ -130,13 +130,18 @@ ul{
 }
 .nav-list .nav-item{
     float: left;
-    margin:18px 44px;
+    padding:18px 0px;
+    margin: 0px 44px;
     color: #696565;
 }
 .nav-list .nav-item-last{
     float: left;
-    margin: 18px 0px 18px 40px;
+    padding: 18px 0px;
+    margin-left:44px;
     color: #696565;
+}
+.nav-list-container a{
+    display: block;
 }
 .nav-list a:hover{
     color: white;
