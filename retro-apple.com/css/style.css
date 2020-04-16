@@ -158,8 +158,25 @@ ul{
 }
 .Ipad-pro{
     width: auto;
-    height: 800px;
+    height: 728px;
     background: url(../pic/A10.jpg) no-repeat;
     background-size: contain;
     /* border: 2px solid red; */
+}
+.Intro-design-backgroung{
+    height: 100px;
+    background-color: black;
+}
+.Intro-design-backgroung .Intro-design{
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    color: #b0b0b0;
+    font-size: 40px;
+    text-align: center;
+    white-space: nowrap; /*no auto new line, the text will break the border in just one line*/
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
