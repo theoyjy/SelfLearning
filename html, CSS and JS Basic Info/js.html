@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
         body{
             margin: 0px;
             background-color:antiquewhite;
+            font-family: 微软雅黑;
         }
         ol{
             font-size:16px;
@@ -22,6 +23,10 @@
             margin-top: 10px;
             height: 40px;
             line-height: 40px;
+        }
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
     </style> 
 </head>
@@ -90,6 +95,190 @@
         <li>Minus multiply divide mole - * / %, convert everything to numbers: <br>
             for exp: 1-"1"=1-1=0; <br> 1-"A"=NAN //not a number;<br>+1=1 <br> 
         </li>
+        <li>assign values: -- *= /= %= ++ --</li>
+        <li>Compare boolean:
+            <br>    a=1>2 : a=true
+            <br>    == compare value |||||| === compare type and value
+        </li>
+        <li>logic expression:
+            <br> &&(and)  ||(or)  !(not)
+        </li>
     </ol>
+
+    <h3>Types and convertion:</h3>
+    <ol>
+        <li>original types: number, string, boolean</li>
+        <li>object: 
+            <ul>
+                <li>from sys: array, functions</li>
+                <li>self-defined var a={1:50,c:30}</li>
+                <li>typeof(var) check type of vars</li>
+            </ul>
+        </li>
+        <li>convertion
+            <ul>
+                <li>Number() convert string, character to number</li>
+                <li>String(a) or a.toString()  number to string </li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>conditions</h3>
+    <ol>
+        <li>if(){ console.log() } else if(){ } else{ }</li>
+        <li>switch(){<br>case 1: ...; break; <br> case 2: ...;break;<br>... <br> default: ...; break; <br> }</li>
+    </ol>
+
+    <h3>loops</h3>
+    <ol>
+        <li>for( ; ; ){...}</li>
+        <li>while(){...}</li>
+        <li>do{...}while()</li>
+        <li>*continues; break;</li>
+    </ol>
+
+    <h3>functions</h3>
+    <ol>
+        <li>function a(){...; return ..;}  a();</li>
+        <li>function a(arg0,arg1...) {...; return ..;} a(arg0,arg1..);</li>
+        <li>dynamic arguments: <br>function a(arg0=0,arg1=1){...; return ..;} a(,3);//there are default values for args, it's ok to not pass or pass partial values for them</li>
+    </ol>
+
+    <h3>varibles scopes----assignable varibles (objs,functions)</h3>
+    <ol>
+        <li>global variables</li>
+        <li>local variables</li>
+        <li>undefined variables would be treated as global no mattter it's in func or what</li>
+    </ol>
+
+    <h3>colsure and pre-analysis</h3>
+    <ol>
+        <li>browser scan the whole JS files then run them, pre-analysis the variable</li>
+        <li>grab the declaration of variables and function in the very front</li>
+        <li>immediately run code --please refer to basic.js</li>
+    </ol>
+
+    <h3>Object</h3>
+    <ol>
+        <em>var obj1={x:0,y:1,z:function(){}}</em>
+        <li>
+            property: <strong> name:value, </strong> end up with comma(,) <br>
+            name: string //can have quotation marks or not <br>
+            exp: 1:0, is the same with "1":0,
+        </li>
+        <li>get value of property of an object: <strong>var name=person1.name;</strong> or <strong>var name=person1['name']</strong></li>
+        <li>modify property: person1.name="Sky", if there is not such a property in the object, this one will be added to the pbj automaticly</li>
+        <li>delete person1.name</li>
+        <li> for (property in person1){...}</li>
+        <li>Class: self-defined or from sys <strong>var person= new Person();</strong></li>
+        <li>define Class: <Strong>function Person(name, sex, age){ <br>
+            this.name=name||"sky"; <br> 
+            this.sex=sex||"male";<br>
+            ...; <br>
+            this.slogan=function)(){...} <br>
+         }</Strong></li>
+        <li>SYS classes: array, Date, String, Math
+            <ul>
+                <li>
+                    array: <br>
+                    var a=new array(10);//a.length=10 <br> 
+                    var a= new array("10")//a=["10"],<strong>a[0]=a["0"]="10"</strong> <br>
+                    delete a[0]; <br>
+                    a['p']="abc";//this will add property "p" to the array but won't be in the array <br>
+                </li>
+                <li>
+                    string: <br>
+                    var a=""; <br> true.toString(); 1.toString()//can't convert null or undefined <br>
+                </li>
+                <li>
+                    Date: <br>
+                    var now = new Date(); <br>
+                    var x=now.getTime();
+                </li>
+                <li>
+                    Math: <br>
+                    Math.max(..,..,.....);<br>
+                    Math.random(); Math.floor(..);
+                </li>
+                <li>...</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Browser principle</h3>
+    <ol>
+        <br>
+        <h4>Load Page Process:</h4>
+        <ol>
+            <li> web address(domain name: www....) -> <br></li>
+            <li> DNS server(8.8.8.8): recieve the domain name -> server convert to IP address (server: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.10.10.10)-> <br></li>
+            <li> browswer recieve IP 10.10.10.10 -> load the page to local <br></li>
+            <li> browser send request to domain  -> <br></li>
+            <li> server get the request of the domain with a specific port eg. www.baidu.com:80 <br></li>
+            <li> server process the required content and sent back them to browser</li>
+            <li> browser recieve contents and parse them</li>
+            <li> user see the page</li>
+        </ol>
+        <br>
+        <h4>Multi-Process--browser:</h4>
+        <ol>
+            <li>JS engine -- single thread</li>
+            <li>UI rending</li>
+            <li>event threads</li>
+            <li>request threads</li>
+            <li>timer threads</li>
+        </ol>
+        <br>
+        <h4>JS</h4>
+        <em>Synchronize tasks or Asynchronous tasks</em> <br>
+        <strong>1. First Phase: Loading default: Sunchronize task</strong>
+        <ol>
+            <li>get page content</li>
+            <li>html->parse: DOM tree: load contents from html tag, then head, meta, title, script. done, not body</li>
+            <li>Synchronize download js file and parser -> </li>
+            <li>parse and run DOM tree: load contents from html tag, then head, meta, title....body ...</li>
+            <li>finish parsing</li>
+            <li>rending -> download files , pics</li>
+            <li>finish loading</li>
+        </ol>
+        <strong id="Sed">2.Second Phase: events process(onload) Asynchronous task</strong>
+    </ol>
+    <h3>BOM and DOM</h3>
+    <ol>
+        <em>javascript consists of ECMAScript，DOM and BOM，diff from every browser，they all have diff display styles</em>
+        <ul>
+            <li>DOM is W3C's standard that all the browsers follow</li> 
+            <li>BOM is the display style based on DOM, but all individual browser has diff display formats</li>
+            <li>window is an object of BOM , not js's obj</li> 
+            <li>DOM（document object model）is API of HTML and XML</li>
+            <li>BOM deal with browser's window and scope，cookies that support JS would be treated as part of BOM。</li>
+        </ul>
+        <li>
+            jump up windows: alert, prompt(input), confirm(return true or false)<br>
+            location.replace("http://www. ... .com"); can direct web to other web pages <br>
+            location.reload() will re-load current website
+        </li>
+        <li>
+            history.back() .forward() <br>
+            history.go(-2); back 2; .go(3); forward 3
+        </li>
+        <li>navigator->userAgent-> get browser info: version company </li>
+        <li>screen->browser</li>
+        <li>Timer: <br>
+            looping execution var sil=setInterval(func,timeSpan) <br>
+            setTimeout(function(){clearInterval(sil);},timeEnd);//like stop after 10s 
+        </li>
+    </ol>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
