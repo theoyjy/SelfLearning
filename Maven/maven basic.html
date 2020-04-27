@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maven</title>
+    <style>
+        body{
+            margin: 0px;
+            background-color:antiquewhite;
+            font-family: 微软雅黑;
+        }
+        ol{
+            font-size:16px;
+            font-weight: normal;
+            background-color: white;
+            margin: 0px;
+        }
+        h3{
+            background-color: rgb(140, 223, 195);
+            margin-bottom: 0px;
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+        }
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style> 
+</head>
+<body>
+    <h3>problems of current tech(WHY)</h3>
+    <ol>
+        <li>if a project is too large, package will not be able to divid modules. <br> Maven can divid a project to multi works easily</li>
+        <li>have to cp/paste jar to WEB-INF/lib. <br>Maven can store jars in storage, only need the API rather than cp the jar</li>
+        <li>downloading of jars vary differently. sometimes hard to download <br> Maven can download jars offically, offical jar</li>
+        <li>jar need added mannually to project, jars are connected to each other complexly. <br>Maven add all connected jars automatically </li>
+    </ol>
+
+    <h3>What is Maven</h3>
+    <ol>
+        <li>Automation construction tool for Java platform
+            <br>Make->Ant->Maven->Gradle</li>
+        <li>construction:
+            <ul>
+                <li>Java source files, framework file, JSP, HTML, pic, etc original file to produce a runnable project</li>
+                <li>validate->compile->test->package->verify->install->deploy</li>
+                <li>
+                    Maven Project Structure: <br>
+                    <img src="../pic/Maven Project Structure.png" alt=""> <br>
+                    *hello-root: project name <br>
+                    *src: source files <br>
+                    *pom.xml: Maven core deployment files <strong>!!run cmd.exe in the folder same with pom.xml</strong> <br>
+                    *main: main code <br>
+                    *test: test code <br>
+                    *java: java meta files <br>
+                    *resources: store framework and other tools' deployment files
+                </li>
+            </ul>
+        </li>
+        <li>Maven Commands:
+            <ul>
+                <li>mvn clean</li>
+                <li>mvn compile</li>
+                <li>mvn test-compile: compile test codes</li>
+                <li>mvn test: run test</li>
+                <li>mvn package: pack up codes</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>POM</h3>
+    <ol>
+        <li>Project Object Model</li>
+        <li>the core deployment file of Maven project</li>
+    </ol>
+
+</body>
+</html>
