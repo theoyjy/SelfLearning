@@ -76,5 +76,56 @@
         <li>the core deployment file of Maven project</li>
     </ol>
 
+    <h3>coordinates</h3>
+    <ol>
+        <li>use 3-dimension to locate a unique project:</li> 
+        <li>
+            groupId: company/orginization address + project name <br>
+            &lt;groupId&gt;com.atguigu.maven&lt;/groupId&gt;
+        </li>
+        <li>
+            artifactId: module name <br>
+            &lt;artifactId&gt;Hello&lt;/artifactId&gt;
+        </li>
+        <li> 
+            version <br>
+            &lt;version&gt;1.0.0 &lt;/version&gt;
+        </li>   
+        <li>the file path is same as com/atguigu/maven/Hello/1.0.0/Hello-1.0.0</li>
+    </ol>
+    <h3>warehouse</h3> 
+    <ol>
+        <li>local warehouse: maven services for local projects</li>
+        <li>remote warehuose:
+            <ul>
+            <li>private server: maven services for LAN(local Area Network)</li>
+            <li>central server: maven services for all the world</li>
+            <li>mirror of central server: amount all the continents to share the workload of central server</li>
+            </ul>
+        </li> 
+        <li>store:
+            <ul>
+                <li>maven plug-ins</li>
+                <li>the third party jars</li>
+                <li>user's own maven projects</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>lifecycle</h3>
+    <ol>
+        <li>the order of construction can not change, must follow the order</li>
+        <li>Maven core defines the abstract lifecycle, the specific tasks are completed by cookies</li>
+        <li>it always construct the program from the very beginning no matter where is it running now</li>
+    </ol>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
